@@ -1,0 +1,15 @@
+{
+  "name": "twitter-weather-bot",
+  "version": "1.0.0",
+  "description": "A node.js bot that tweets your city's weather",
+  "main": "weatherbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mehdi Chekori",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0",
+    "twit": "^2.2.11"
+  }
+}
