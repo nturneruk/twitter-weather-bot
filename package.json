@@ -1,12 +1,12 @@
 {
-  "name": "twitter-weather-bot",
+  "name": "grantham-weather-bot",
   "version": "1.0.0",
-  "description": "A node.js bot that tweets your city's weather",
+  "description": "A node.js bot that tweets your Grantham's weather hourly.",
   "main": "weatherbot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mehdi Chekori",
+  "author": "Noah Turner",
   "license": "ISC",
   "dependencies": {
     "request": "^2.88.0",

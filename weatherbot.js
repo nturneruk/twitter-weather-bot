@@ -59,15 +59,15 @@ function CleanData(){
     currentTemp = currentTemp.toFixed(0);
     minimumTemp = minimumTemp.toFixed(0);
     maximumTemp = maximumTemp.toFixed(0);
-    windSpeed = ConvertMetersPerSecondToKmPerHour(windSpeed);
+    windSpeed = ConvertMetersPerSecondToMilesPerHour(windSpeed);
 }
 
 /**
  * Converts the speed in m/s passed as a parameter to Km/h
  * @param {number} speed 
  */
-function ConvertMetersPerSecondToKmPerHour(speed){
-    return (speed * 3.6).toFixed(0);
+function ConvertMetersPerSecondToMilesPerHour(speed){
+    return (speed * 2.2369).toFixed(0);
 }
 
 /**
@@ -91,7 +91,7 @@ function SetStatus(tweeterUsername){
 }
 
 /**
- * Gets the weather data for Montreal then tweets it.
+ * Gets the weather data for Grantham then tweets it.
  */
 function Tweet(){  
 
@@ -127,13 +127,13 @@ function ParseTweet(tweet){
     // ,[a-z]{2} : Matches any 2 character country code preceded by a comma
     // $ : Matches the end of a string
     // the "i" parameter is a flag to ignore the case 
-    var regexExpression = new RegExp("@MtlWeatherBot (([a-z]*)|([a-z]* [a-z]*)),[a-z]{2}$","i");
+    var regexExpression = new RegExp("@GranthamWeather (([a-z]*)|([a-z]* [a-z]*)),[a-z]{2}$","i");
     
     if(regexExpression.test(tweet) === true){
         //returns an array of [City, CountryCode]
         return tweet.substring(15).split(',');
     } else {
-        throw new Error("Sorry I couldn't understand what you tweeted. Try the following format: @ mtlweatherbot ,Montreal,CA");
+        throw new Error("Sorry I couldn't understand what you tweeted. Try the following format: @GranthamWeather ,Grantham,GB");
     }       
 }
 
