@@ -1,9 +1,10 @@
 {
   "name": "grantham-weather-bot",
   "version": "1.0.0",
-  "description": "A node.js bot that tweets your Grantham's weather hourly.",
+  "description": "A node.js bot that tweets Grantham's weather",
   "main": "weatherbot.js",
   "scripts": {
+    "start": "node weatherbot.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Noah Turner",
